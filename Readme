@@ -9,9 +9,21 @@
 代码版本一：
 判断元音字母，计算元音字母比例，判断是否超过30%，标记
 
+重构：
+（把元音字母、比例判断、字母替换放到StringJudgementer中，
+测试用例1放到相应测试类StringJudgementerTest中仍可通过）
+
+
 测试用例2：
 无标记，不替换
 有标记，替换
 
 代码版本二：
 加上字符替换部分(默认全部元音超过30%，间断字母也各自替换)
+
+problem:
+GameTest有标记替换的测试结果报：
+Expected :printer.print("hmommyr");
+Actual   :printer.print("hear");
+
+但是程序直接输入"hear"时，结果是"hmommyr"，有点儿眼拙，找不出来问题原因，so sad...
